@@ -8,11 +8,13 @@ package calculator;
  */
 public class Calculator {
 
+    // The singleton instance
     private static Calculator calculatorInstance = null;
 
     private Calculator() {
     }
 
+    // Get Singleton instance
     public static Calculator getInstance() {
         if (calculatorInstance == null) {
             calculatorInstance = new Calculator();
@@ -34,7 +36,7 @@ public class Calculator {
 
 
     public double divide(double a, double b) {
-        // Try Catch in order to check if user is not dividing by zero
+        // Check if the user is not trying to divide by zero
         if (b != 0)
         {
             return a / b;
